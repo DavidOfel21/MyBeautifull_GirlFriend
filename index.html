@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>For Wulan ❤️ - Bukan Rayuan Gombal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Floating Hearts Background -->
+  <div class="floating-hearts" id="floatingHearts"></div>
+
+  <!-- Music Button -->
+  <button class="music-btn" onclick="toggleMusic()" id="musicBtn">
+    🔇
+  </button>
+
+  <!-- Audio -->
+  <audio id="bgMusic" loop>
+    <source src="music/Judika_-_Bukan_Rayuan_Gombal_(mp3.pm).mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- LOCKSCREEN -->
+  <div id="lockscreen">
+    <div class="lockbox">
+      <h2>For My Love</h2>
+      <div class="subtitle">Wulan Liviana Simbolon ❤️</div>
+      <input type="password" id="password" placeholder="DD-MM-YYYY" maxlength="10" onkeypress="handleKeyPress(event)">
+      <button onclick="unlock()">Unlock</button>
+      <div class="hint">Hint: <span>22 Desember 2023</span></div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="content" id="mainContent">
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <h1>Wulan Liviana Simbolon</h1>
+      <p>"Dan dari sekian banyak cerita, aku selalu ingin kamu yang menjadi tokoh utamanya."</p>
+      <div class="hero-date">
+        Sejak 22 Desember 2023
+      </div>
+    </section>
+
+
+    <!-- PUISI SECTION 1 -->
+    <section class="poem-section">
+      <div class="poem-container">
+        <h2 class="poem-title">Untuk Wulan</h2>
+        <div class="poem-content">
+          <p class="poem-line">Di antara ribuan bintang di langit,</p>
+          <p class="poem-line">Kau adalah yang paling terang.</p>
+          <p class="poem-line">Di antara jutaan cerita di dunia,</p>
+          <p class="poem-line">Kau adalah cerita yang ingin aku baca setiap hari.</p>
+          <p class="poem-line">Matamu adalah puisi yang tak pernah selesai aku tulis,</p>
+          <p class="poem-line">Senyummu adalah melodi yang selalu ingin aku dengar.</p>
+          <p class="poem-line">Bersamamu, aku belajar bahwa cinta</p>
+          <p class="poem-line">Bukan tentang kesempurnaan, tapi tentang ketulusan.</p>
+        </div>
+        <div class="poem-signature">- Untuk Wulan Liviana Simbolon ❤️</div>
+      </div>
+    </section>
+
+    <!-- COUNTDOWN SECTION -->
+    <section class="countdown">
+      <h2>Kita telah bersama selama</h2>
+      <div id="timer"></div>
+      <div class="timer-detail" id="timerDetail">
+        <div class="timer-box">
+          <div class="number" id="days">0</div>
+          <div class="label">Hari</div>
+        </div>
+        <div class="timer-box">
+          <div class="number" id="hours">0</div>
+          <div class="label">Jam</div>
+        </div>
+        <div class="timer-box">
+          <div class="number" id="minutes">0</div>
+          <div class="label">Menit</div>
+        </div>
+        <div class="timer-box">
+          <div class="number" id="seconds">0</div>
+          <div class="label">Detik</div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PUISI SECTION 2 -->
+    <section class="poem-section-alt">
+      <div class="poem-container-alt">
+        <h2 class="poem-title-alt">Cinta Sederhana</h2>
+        <div class="poem-content-alt">
+          <p class="poem-line-alt">Aku tidak butuh istana megah,</p>
+          <p class="poem-line-alt">Cukup senyummu di pagi hari.</p>
+          <p class="poem-line-alt">Aku tidak butuh permata berkilau,</p>
+          <p class="poem-line-alt">Cukup tawamu yang menghangatkan hati.</p>
+          <p class="poem-line-alt">Karena bersamamu,</p>
+          <p class="poem-line-alt">Semua yang sederhana terasa istimewa.</p>
+          <p class="poem-line-alt">Kau adalah rumah yang selalu ingin aku pulang,</p>
+          <p class="poem-line-alt">Di mana hatiku menemukan kedamaian.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LETTER SECTION -->
+    <section class="letter">
+      <div class="letter-content">
+        <p>
+          "Aku tidak menjanjikan dunia yang sempurna,<br>
+          tapi aku berjanji akan selalu memilihmu<br>
+          di setiap versi hidupku.<br>
+          Karena bersamamu, aku menemukan arti<br>
+          dari sebuah kepulangan."
+        </p>
+        <div class="letter-signature">
+          - Untuk Wulan ❤️
+        </div>
+      </div>
+    </section>
+
+    <!-- PUISI SECTION 3 -->
+    <section class="poem-section">
+      <div class="poem-container">
+        <h2 class="poem-title">Janji Kecil</h2>
+        <div class="poem-content">
+          <p class="poem-line">Aku berjanji akan selalu ada,</p>
+          <p class="poem-line">Saat kau lelah dan ingin bersandar.</p>
+          <p class="poem-line">Aku berjanji akan selalu mendengar,</p>
+          <p class="poem-line">Setiap cerita yang ingin kau bagikan.</p>
+          <p class="poem-line">Aku berjanji akan selalu menjaga,</p>
+          <p class="poem-line">Setiap mimpi dan harapanmu.</p>
+          <p class="poem-line">Karena kaulah masa depanku,</p>
+          <p class="poem-line">Dan aku ingin menghabiskan sisa hidupku bersamamu.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PUISI SECTION 4 -->
+    <section class="poem-section-alt">
+      <div class="poem-container-alt">
+        <h2 class="poem-title-alt">Karena Kamu</h2>
+        <div class="poem-content-alt">
+          <p class="poem-line-alt">Karena kamu, aku percaya pada takdir.</p>
+          <p class="poem-line-alt">Karena kamu, aku tahu arti sabar.</p>
+          <p class="poem-line-alt">Karena kamu, aku mengerti bahwa cinta</p>
+          <p class="poem-line-alt">Bukan tentang memiliki, tapi tentang menghargai.</p>
+          <p class="poem-line-alt">Terima kasih telah hadir,</p>
+          <p class="poem-line-alt">Dan mewarnai hidupku dengan cinta.</p>
+          <p class="poem-line-alt">Kau adalah hadiah terindah,</p>
+          <p class="poem-line-alt">Yang pernah Tuhan berikan padaku.</p>
+        </div>
+        <div class="poem-signature">- I Love You, Wulan ❤️</div>
+      </div>
+    </section>
+
+
+    <!-- GALLERY SECTION -->
+    <section class="gallery">
+      <h2>Our Beautiful Moments</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="gallery/waAku.jpeg" alt="Memory 1">
+        </div>
+        <div class="gallery-item">
+          <img src="gallery/im2.jpg" alt="Memory 2">
+        </div>
+        <div class="gallery-item">
+          <img src="gallery/im10.jpeg" alt="Memory 3">
+        </div>
+        <div class="gallery-item">
+          <img src="gallery/im11.jpeg" alt="Memory 4">
+        </div>
+        <div class="gallery-item">
+          <img src="gallery/im12.jpeg" alt="Memory 5">
+        </div>
+        <div class="gallery-item">
+          <img src="gallery/im13.jpeg" alt="Memory 6">
+        </div>
+        <div class="gallery-item">
+          <img src="gallery/im6.jpg" alt="Memory 7">
+        </div>
+        <div class="gallery-item">
+          <img src="gallery/im7.jpeg" alt="Memory 8">
+        </div>
+        <div class="gallery-item">
+          <img src="gallery/im8.jpeg" alt="Memory 9">
+        </div>
+        <div class="gallery-item">
+          <img src="gallery/im9.jpeg" alt="Memory 10">
+        </div>
+        <div class="gallery-item">
+          <img src="gallery/image.png" alt="Memory 11">
+        </div>
+        <div class="gallery-item">
+          <img src="gallery/imm3.jpg" alt="Memory 12">
+        </div>
+        <div class="gallery-item">
+          <img src="gallery/imm4.jpg" alt="Memory 13">
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Made with <span>❤️</span> for Wulan Liviana Simbolon <br>
+      Setiap hari bersamamu adalah hadiah terindah <br>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
